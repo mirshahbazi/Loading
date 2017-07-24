@@ -102,7 +102,7 @@ public class MAMBallView extends View {
      * @param canvas
      * @param j
      * @param i
-     * @param v    Control the length of the two rounds when connecting, indirectly control the thickness of the connection line, the value of 1 when the cable is straight
+     * @param v              Control the length of the two rounds when connecting, indirectly control the thickness of the connection line, the value of 1 when the cable is straight
      * @param handle_len_rate
      * @param maxDistance
      */
@@ -139,19 +139,15 @@ public class MAMBallView extends View {
 
 
         if (d > maxDistance) {
-//            canvas.drawCircle(ball1.centerX(), ball1.centerY(), circle1.radius, paint);
             canvas.drawCircle(ball2.centerX(), ball2.centerY(), circle2.radius, paint);
         } else {
             float scale2 = 1 + SCALE_RATE * (1 - d / maxDistance);
             float scale1 = 1 - SCALE_RATE * (1 - d / maxDistance);
             radius2 *= scale2;
-//            radius1 *= scale1;
-//            canvas.drawCircle(ball1.centerX(), ball1.centerY(), radius1, paint);
             canvas.drawCircle(ball2.centerX(), ball2.centerY(), radius2, paint);
 
         }
 
-//        Log.d("Metaball_radius", "radius1:" + radius1 + ",radius2:" + radius2);
         if (radius1 == 0 || radius2 == 0) {
             return;
         }
@@ -167,7 +163,6 @@ public class MAMBallView extends View {
             u1 = 0;
             u2 = 0;
         }
-//        Log.d("Metaball", "center2:" + Arrays.toString(center2) + ",center1:" + Arrays.toString(center1));
         float[] centermin = new float[]{center2[0] - center1[0], center2[1] - center1[1]};
 
         float angle1 = (float) Math.atan2(centermin[1], centermin[0]);
@@ -176,9 +171,6 @@ public class MAMBallView extends View {
         float angle1b = angle1 - u1 - (angle2 - u1) * v;
         float angle2a = (float) (angle1 + Math.PI - u2 - (Math.PI - u2 - angle2) * v);
         float angle2b = (float) (angle1 - Math.PI + u2 + (Math.PI - u2 - angle2) * v);
-
-//        Log.d("Metaball", "angle1:" + angle1 + ",angle2:" + angle2 + ",angle1a:" + angle1a + ",angle1b:" + angle1b + ",angle2a:" + angle2a + ",angle2b:" + angle2b);
-
 
         float[] p1a1 = getVector(angle1a, radius1);
         float[] p1b1 = getVector(angle1b, radius1);
@@ -191,14 +183,11 @@ public class MAMBallView extends View {
         float[] p2b = new float[]{p2b1[0] + center2[0], p2b1[1] + center2[1]};
 
 
-//        Log.d("Metaball", "p1a:" + Arrays.toString(p1a) + ",p1b:" + Arrays.toString(p1b) + ",p2a:" + Arrays.toString(p2a) + ",p2b:" + Arrays.toString(p2b));
-
         float[] p1_p2 = new float[]{p1a[0] - p2a[0], p1a[1] - p2a[1]};
 
         float totalRadius = (radius1 + radius2);
         float d2 = Math.min(v * handle_len_rate, getLength(p1_p2) / totalRadius);
-        d2 *= Math.min(1, d * 2 / (radius1 + radius2));
-//        Log.d("Metaball", "d2:" + d2);
+        d2 *= Math.min(1, d * 8 / (radius1 + radius2));
         radius1 *= d2;
         radius2 *= d2;
 
@@ -206,7 +195,6 @@ public class MAMBallView extends View {
         float[] sp2 = getVector(angle2a + pi2, radius2);
         float[] sp3 = getVector(angle2b - pi2, radius2);
         float[] sp4 = getVector(angle1b + pi2, radius1);
-//        Log.d("Metaball", "sp1:" + Arrays.toString(sp1) + ",sp2:" + Arrays.toString(sp2) + ",sp3:" + Arrays.toString(sp3) + ",sp4:" + Arrays.toString(sp4));
 
 
         Path path1 = new Path();
@@ -231,24 +219,6 @@ public class MAMBallView extends View {
         return (float) Math.sqrt(d);
     }
 
-
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        switch (event.getAction()) {
-//            case MotionEvent.ACTION_DOWN:
-//                break;
-//            case MotionEvent.ACTION_MOVE:
-//                Circle circle = circlePaths.get(0);
-//                circle.center[0] = event.getX();
-//                circle.center[1] = event.getY();
-//                invalidate();
-//                break;
-//            case MotionEvent.ACTION_UP:
-//                break;
-//        }
-//
-//        return true;
-//    }
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -284,7 +254,7 @@ public class MAMBallView extends View {
         wa.setDuration(2500);
         wa.setInterpolator(new AccelerateDecelerateInterpolator());
         wa.setRepeatCount(Animation.INFINITE);
-        wa.setRepeatMode(Animation.REVERSE);
+        wa.setRepeatMode(Animation.RELATIVE_TO_PARENT);
         startAnimation(wa);
     }
 
