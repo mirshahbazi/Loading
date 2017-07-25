@@ -4,6 +4,8 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
+
+
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
@@ -29,3 +31,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     testCompile 'junit:junit:4.12'
 }
+
+
