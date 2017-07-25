@@ -137,7 +137,7 @@ public class MAMBallView extends View {
         float pi2 = (float) (Math.PI / 2);
         float u1, u2;
         //this is sample
-        //this is sample
+        
 
         if (d > maxDistance) {
             canvas.drawCircle(ball2.centerX(), ball2.centerY(), circle2.radius, paint);
