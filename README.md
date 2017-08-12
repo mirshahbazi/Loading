@@ -3,7 +3,8 @@ ball loading view for android
 
 ![Demo](http://mam1365.us.cube.filecorn.com/ezgif.com-crop.gif)
 ![](preview/sample.gif)
-![Hero Image](https://raw.githubusercontent.com/mirshahbazi/Loading/app/preview/sample.gif)
+![Hero Image](https://raw.githubusercontent.com/mirshahbazi/Loading/blob/master/app/preview/sample.gif)
+
 How to:
 
 
