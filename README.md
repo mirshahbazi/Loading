@@ -20,9 +20,9 @@ dependencies {
     compile 'com.github.mirshahbazi:Loading:master-SNAPSHOT'
 }
 ```
-
-```maven:
+## Using with maven
 - Add the JitPack repository to your build file
+```maven:
 	<repositories>
 		<repository>
 		    <id>jitpack.io</id>
@@ -31,16 +31,16 @@ dependencies {
 	</repositories>
  ``` 
 -  Add the dependency
-  
+ ```maven: 
   	<dependency>
 	    <groupId>com.github.mirshahbazi</groupId>
 	    <artifactId>Loading</artifactId>
 	    <version>master-SNAPSHOT</version>
 	</dependency>
+```
 
 How to use:
  Add this code to your xml layout:
-
 
 
     <loading.mam.com.mamloadingview.MAMBallView
@@ -48,6 +48,8 @@ How to use:
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"/>
+	
+## Using in java
 ```java        
         
   and in your activity or fragment add this :
