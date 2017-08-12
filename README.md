@@ -49,18 +49,18 @@ How to use:
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"/>
 	
-## Using in java
+## Java
 ```java        
         
-  and in your activity or fragment add this :
+ \\ and in your activity or fragment add this :
   
     mamBallView = (MAMBallView) this.findViewById(R.id.metaball);
     
-    for change the color use this:
+    \\for change the color use this:
     
      mamBallView.SetColor(Color.GREEN);
     
-    for change the paint mode use this:
+    \\for change the paint mode use this:
     
       mamBallView.setPaintMode(0);
       
