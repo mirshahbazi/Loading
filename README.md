@@ -39,6 +39,8 @@ dependencies {
 ```
 
 How to use:
+## Xml
+
  Add this code to your xml layout:
 
 
@@ -63,7 +65,7 @@ How to use:
     
       mamBallView.setPaintMode(0);
       
-'''      
+```      
 
   
 
