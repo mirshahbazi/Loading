@@ -52,15 +52,15 @@ How to use:
 ## Java
 ```java        
         
- \\ and in your activity or fragment add this :
+ // and in your activity or fragment add this :
   
     mamBallView = (MAMBallView) this.findViewById(R.id.metaball);
     
-    \\for change the color use this:
+    //for change the color use this:
     
      mamBallView.SetColor(Color.GREEN);
     
-    \\for change the paint mode use this:
+    //for change the paint mode use this:
     
       mamBallView.setPaintMode(0);
       
