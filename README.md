@@ -5,34 +5,32 @@ ball loading view for android
 
 How to:
 
-To get a Git project into your build:
 
-Step 1. Add the JitPack repository to your build file
+## Using with gradle
+- Add the JitPack repository to your root build.gradle:
+```gradle
+repositories {
+    maven { url "https://jitpack.io" }
+}
+```
 
-gradle:
-Add it in your root build.gradle at the end of repositories:
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  
-  Step 2. Add the dependency
-  
-  	dependencies {
-	        compile 'com.github.mirshahbazi:Loading:master-SNAPSHOT'
-	}
-maven:
-Step 1. Add the JitPack repository to your build file
+- Add the dependency to your sub build.gradle:
+```gradle
+dependencies {
+    compile 'com.github.mirshahbazi:Loading:master-SNAPSHOT'
+}
+```
+
+```maven:
+- Add the JitPack repository to your build file
 	<repositories>
 		<repository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
-  
-  Step 2. Add the dependency
+ ``` 
+-  Add the dependency
   
   	<dependency>
 	    <groupId>com.github.mirshahbazi</groupId>
@@ -42,13 +40,15 @@ Step 1. Add the JitPack repository to your build file
 
 How to use:
  Add this code to your xml layout:
- 
+
+
+
     <loading.mam.com.mamloadingview.MAMBallView
         android:id="@+id/metaball"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"/>
-        
+```java        
         
   and in your activity or fragment add this :
   
@@ -62,7 +62,7 @@ How to use:
     
       mamBallView.setPaintMode(0);
       
-      
+'''      
 
   
 
