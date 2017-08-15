@@ -5,6 +5,8 @@ ball loading view for android
 ![Hero Image](https://github.com/mirshahbazi/Loading/blob/master/app/preview/sample.gif)
 
 
+[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
+
 ## Using with gradle
 - Add the JitPack repository to your root build.gradle:
 ```gradle
