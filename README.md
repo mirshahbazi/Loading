@@ -17,9 +17,10 @@ repositories {
 
 - Add the dependency to your sub build.gradle:
 ```gradle
-	dependencies {
-	        compile 'com.github.mirshahbazi:TypefaceHelper:1.2.1'
+		dependencies {
+	        compile 'com.github.mirshahbazi:Loading:-SNAPSHOT'
 	}
+
 
 ```
 ## Using with maven
